@@ -40,5 +40,7 @@ namespace First.App.Business.Concretes
         {
             return repository.Get().ToList();
         }
+
+       
     }
 }

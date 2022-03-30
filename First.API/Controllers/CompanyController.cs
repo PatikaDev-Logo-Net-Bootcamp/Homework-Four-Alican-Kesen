@@ -121,10 +121,9 @@ namespace First.API.Controllers
         [HttpDelete]
         public IActionResult Delete([FromQuery] int id)
         {
-            var willDeleteCompany = companyService.GetAllCompany().Select(x => x.Id = id);
-            companyService.DeleteCompany(new Company(willDeleteCompany)
+            companyService.DeleteCompany(new Company()
             {
-                Id = willDeleteCompany,
+                Id = id,
                 IsDeleted = true
             });
             return Ok(
